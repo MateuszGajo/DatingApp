@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,7 @@ namespace API.Controllers
 
         }
 
-
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<List<AppUser>>> GetUsers()
         {
