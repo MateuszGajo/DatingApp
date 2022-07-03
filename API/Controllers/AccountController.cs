@@ -36,6 +36,7 @@ namespace API.Controllers
             {
                 Username = registerDto.Username.ToLower(),
                 Password = hashedPassword,
+
             };
 
             _context.Users.Add(newUser);
