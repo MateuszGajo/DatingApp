@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+
     public class AuthResponse
     {
         public UserDTO User { get; set; }
@@ -36,6 +37,7 @@ namespace API.Controllers
             {
                 Username = registerDto.Username.ToLower(),
                 Password = hashedPassword,
+
             };
 
             _context.Users.Add(newUser);

@@ -11,6 +11,7 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { HomeGuard } from './_guards/home.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -37,7 +38,8 @@ const routes: Routes = [
   {
     path: '**',
     pathMatch: 'full',
-    component: HomeComponent,
+    component: MainlayoutComponent,
+    children: [{ path: '', component: NotFoundComponent }],
   },
 ];
 
