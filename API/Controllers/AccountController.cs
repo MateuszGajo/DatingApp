@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+
     public class AuthResponse
     {
         public UserDTO User { get; set; }
